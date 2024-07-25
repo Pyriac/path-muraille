@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
-import Papa from "papaparse";
+import "../assets/styles/workdetail.css";
 
-import "../assets/styles/workDetail.css";
+import Papa from "papaparse";
 
 import Application from "../components/Application";
 
@@ -16,6 +16,8 @@ export default function WorkDetail() {
       complete: (result) => result,
       error: (error) => console.error(error),
     });
+
+  console.info("coucou");
 
   const { data } = parse();
   const indexTemporaire = 0;
