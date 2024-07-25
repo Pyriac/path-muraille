@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 
 import Papa from "papaparse";
+import "../assets/styles/workDetail.css";
 
 export default function WorkDetail() {
   const jobsFromLoader = useLoaderData();
@@ -19,7 +20,8 @@ export default function WorkDetail() {
     <>
       <section className="workTitle">
         <h1>
-          {data[indexTemporaire].job} {data[indexTemporaire].sex}
+          {data[indexTemporaire].job.toUpperCase()}{" "}
+          {data[indexTemporaire].sex.toUpperCase()}
         </h1>
         <button>Coeur</button>
       </section>

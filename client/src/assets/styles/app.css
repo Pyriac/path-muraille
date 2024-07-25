@@ -8,6 +8,16 @@
   width: 100%;
 }
 
+:root {
+  --blue: #214e65;
+  --beige: #e4cead;
+  --offwhite: #eef0e8;
+  --white: #f5f5f5;
+  --lightorange: #db9644;
+  --orange: #e2711d;
+  --red: #99564b;
+}
+
 section {
   display: flex;
   flex-direction: column;
