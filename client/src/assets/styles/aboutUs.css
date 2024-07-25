@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria&family=Molengo&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.about-us-container {
+  padding: 1rem; /* Ajoute un padding autour du conteneur principal */
+  text-align: center; /* Centre les éléments à l'intérieur */
+}
+
+.NOS-VALEURS {
+  text-align: center;
+  margin: 1rem 0;
+  color: #214e65;
+  font-family: "Jomhuria", serif;
+  font-weight: 400;
+}
+
+.China_About {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.625rem; /* Ajoute des coins arrondis à l'image */
+}
+
+.values-container {
+  display: inline-block;
+  max-width: 100%; /* Limite la largeur pour s'aligner avec l'image */
+  text-align: left; /* Alignement du texte à gauche */
+}
+
+.values {
+  background-color: #eef0e8;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  margin: 1rem auto; /* Ajoute une marge égale autour du bloc de valeurs */
+}
+
+.values p {
+  font-family: "Molengo", sans-serif;
+  font-size: 1.2rem;
+  color: #214e65;
+  margin: 1rem 0; /* Uniformise la marge entre les paragraphes */
+  text-align: center;
+  font-weight: 600;
+}
