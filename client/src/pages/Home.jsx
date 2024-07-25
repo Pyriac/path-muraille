@@ -26,7 +26,7 @@ export default function Home() {
       </div>
       <h2 className="Offre_titre">LES OFFRES DU MOMENT</h2>
       {data.slice(0, 10).map((work) => (
-        <Card key={work.id} />
+        <Card key={work.id} data={work} />
       ))}
     </section>
   );
