@@ -65,3 +65,8 @@
 .workTitle button {
   margin-left: 10%;
 }
+
+.workImage {
+  height: 160px;
+  width: auto;
+}

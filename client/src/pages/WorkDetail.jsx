@@ -27,6 +27,7 @@ export default function WorkDetail() {
           <button>Coeur</button>
         </div>
 
+
         <section className="jobCard">
           <h2>{data[indexTemporaire].job_details}</h2>
           <h3>Vos missions :</h3>
@@ -46,9 +47,16 @@ export default function WorkDetail() {
           <p>{data[indexTemporaire].location}</p>
         </section>
 
-        <h4>Image à afficher</h4>
+         <img
+        className="workImage"
+        src={data[indexTemporaire].image}
+        alt={data[indexTemporaire].job}
+      />
+
         <button>Bouton à modifier</button>
-      </section>
+   
+
+   
     </>
   );
 }
