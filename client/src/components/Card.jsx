@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import "./assets/styles/app.css";
-import Coeur from "./assets/Vector.svg";
+import "../assets/styles/app.css";
+import Coeur from "../assets/Vector.svg";
 
 export default function Card({ title, company, location, description }) {
   return (
@@ -28,5 +28,3 @@ Card.propTypes = {
   location: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
-
-

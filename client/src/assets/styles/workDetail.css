@@ -24,3 +24,8 @@
 .workTitle button {
   width: 100px;
 }
+
+.workImage {
+  height: 160px;
+  width: auto;
+}
