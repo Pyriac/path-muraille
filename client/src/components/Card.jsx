@@ -28,3 +28,5 @@ Card.propTypes = {
   location: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
+
+

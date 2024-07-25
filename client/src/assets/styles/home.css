@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria&family=Molengo&display=swap");
+body {
+  background-color: #f5f5f5;
+}
+
+h2 {
+  font-family: "Jomhuria", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+.Offre_titre {
+  justify-content: center;
+  margin: 1rem 0rem;
+  color: #214e65;
+}
+
+.Search_bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
