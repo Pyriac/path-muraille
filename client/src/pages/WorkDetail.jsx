@@ -17,6 +17,8 @@ export default function WorkDetail() {
       error: (error) => console.error(error),
     });
 
+  console.info("coucou");
+
   const { data } = parse();
   const indexTemporaire = 0;
 
