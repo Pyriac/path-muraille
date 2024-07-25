@@ -8,6 +8,11 @@ nav {
   display: flex;
   width: 100%;
   padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 8px 0px;
+}
+
+.Logo {
+  margin-bottom: 0.5rem;
 }
 
 h2 {
