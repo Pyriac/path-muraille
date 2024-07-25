@@ -64,7 +64,9 @@ export default function WorkDetail() {
         src={data[indexTemporaire].image}
         alt={data[indexTemporaire].job}
       />
-      <button>Bouton à modifier</button>
+      <button className="button" onClick={toggleApply}>
+        Candidater
+      </button>
       {apply && (
         <div className="search">
           <div
