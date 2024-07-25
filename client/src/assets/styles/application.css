@@ -5,10 +5,10 @@
   background-color: #f5f5f5;
   padding: 20px;
   border-radius: 10px;
-  width: 100%;
+  width: 90%;
   position: absolute;
   display: flex;
-  margin-bottom: 50svh;
+  margin-bottom: 90svh;
 }
 
 .message {
@@ -106,7 +106,7 @@ span {
   width: 90%;
   position: absolute;
   display: flex;
-  margin-top: -50svh;
+  margin-top: -60svh;
   text-align: center;
 }
 
@@ -115,4 +115,8 @@ span {
   text-align: right;
   margin-bottom: 1rem;
   color: var(--orange);
+}
+
+.applySendMsg {
+  margin-bottom: 1rem;
 }
