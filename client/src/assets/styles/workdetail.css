@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria&family=Molengo&display=swap");
+
+.jobCard {
+  background-color: var(--beige);
+  width: 80%;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.jobCard > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+.jobCard li {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Molengo", sans-serif;
+}
+
+.jobCard h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Molengo", sans-serif;
+}
+.jobCard h3 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  font-family: "Molengo", sans-serif;
+  margin-top: 0.5rem;
+}
+.jobCard p {
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: "Molengo", sans-serif;
+  margin-bottom: 0.5rem;
+}
+.workTitle {
+  margin-top: 2rem;
+  background-color: var(--offwhite);
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 2rem;
+}
+.workTitle div {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.workTitle h1 {
+  font-size: 2rem;
+  color: var(--blue);
+  letter-spacing: 0.05em;
+  font-family: "Jomhuria", serif;
+}
+.workTitle button {
+  margin-left: 10%;
+}
+
+.workImage {
+  height: auto;
+  width: 60%;
+  border-radius: 8px;
+  margin-inline: 20svw;
+}
+
+.overlay {
+  width: 100vw;
+  height: 10vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background-color: rgba(49, 49, 49, 0.8);
+  width: 100%;
+  height: 100%;
+}
