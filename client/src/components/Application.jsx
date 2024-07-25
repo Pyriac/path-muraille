@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import ApplicationSend from "../components/Application";
-
 import "../assets/styles/application.css";
 
 export default function Application() {
@@ -10,6 +8,8 @@ export default function Application() {
   const toggleSend = () => {
     setSend(!send);
   };
+
+  const submitting = false;
 
   return (
     <section>
@@ -76,7 +76,27 @@ export default function Application() {
               <title>empty</title>
             </div>
             <div className="search-content">
-              <ApplicationSend />
+              <form className="form2">
+                <button
+                  className="buttonClose"
+                  type="button"
+                  disabled={submitting}
+                >
+                  X
+                </button>
+                <p>
+                  Votre candidature est bien envoyée.
+                  <br />
+                  Surveillez votre boîte mail !
+                </p>
+                <button
+                  className="buttonOrange"
+                  type="button"
+                  disabled={submitting}
+                >
+                  Fermer
+                </button>
+              </form>
             </div>
           </div>
         )}

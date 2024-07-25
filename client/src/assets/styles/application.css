@@ -95,3 +95,24 @@ span {
   font-size: 0.8em;
   padding: 8px;
 }
+
+.form2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  position: absolute;
+  display: flex;
+  margin-top: -50svh;
+  text-align: center;
+}
+
+.buttonClose {
+  all: unset;
+  text-align: right;
+  margin-bottom: 1rem;
+  color: var(--orange);
+}
