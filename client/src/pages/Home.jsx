@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 
 import Papa from "papaparse";
 import Card from "../components/Card";
@@ -20,8 +20,6 @@ export default function Home() {
 
   return (
     <section>
-      <h1>coucou from Home</h1>
-      <h2>{data[0].sex}</h2>
       <div className="Search_bar">
         <input type="text" className="searchInput" />
         <button>Rechercher</button>
@@ -29,7 +27,9 @@ export default function Home() {
       <h2 className="Offre_titre">LES OFFRES DU MOMENT</h2>
       <div className="Card_Moment">
         {data.slice(0, 10).map((work) => (
-          <Card key={work.id} data={work} />
+          <Link key={work.id} to={`/jobs/details/${work.id}`}>
+            <Card data={work} />
+          </Link>
         ))}
       </div>
     </section>

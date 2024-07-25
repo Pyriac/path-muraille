@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 
 import "../assets/styles/workdetail.css";
 
@@ -9,6 +9,8 @@ import Application from "../components/Application";
 
 export default function WorkDetail() {
   const jobsFromLoader = useLoaderData();
+  const { id } = useParams();
+  const jobId = Number(id - 1);
 
   const parse = () =>
     Papa.parse(jobsFromLoader, {
@@ -17,10 +19,9 @@ export default function WorkDetail() {
       error: (error) => console.error(error),
     });
 
-  console.info("coucou");
-
   const { data } = parse();
-  const indexTemporaire = 0;
+
+  const theJob = data[jobId];
 
   const [apply, setApply] = useState(false);
   const toggleApply = () => {
@@ -36,36 +37,31 @@ export default function WorkDetail() {
     <section className="workTitle">
       <div>
         <h1>
-          {data[indexTemporaire].job.toUpperCase()}{" "}
-          {data[indexTemporaire].sex.toUpperCase()}
+          {theJob.job.toUpperCase()} {theJob.sex.toUpperCase()}
         </h1>
         <button>Coeur</button>
       </div>
 
       <section className="jobCard">
-        <h2>{data[indexTemporaire].job_details}</h2>
+        <h2>{theJob.job_details}</h2>
         <h3>Vos missions :</h3>
         <ul>
-          <li>{data[indexTemporaire].task_details1}</li>
-          <li>{data[indexTemporaire].task_details2}</li>
-          <li>{data[indexTemporaire].task_details3}</li>
-          <li>{data[indexTemporaire].task_details4}</li>
+          <li>{theJob.task_details1}</li>
+          <li>{theJob.task_details2}</li>
+          <li>{theJob.task_details3}</li>
+          <li>{theJob.task_details4}</li>
         </ul>
         <h3>Profil recherché :</h3>
         <ul>
-          <li>{data[indexTemporaire].profil}</li>
-          <li>{data[indexTemporaire].education}</li>
+          <li>{theJob.profil}</li>
+          <li>{theJob.education}</li>
         </ul>
         <h3>Employeur :</h3>
-        <p>{data[indexTemporaire].company}</p>
-        <p>{data[indexTemporaire].location}</p>
+        <p>{theJob.company}</p>
+        <p>{theJob.location}</p>
       </section>
 
-      <img
-        className="workImage"
-        src={data[indexTemporaire].image}
-        alt={data[indexTemporaire].job}
-      />
+      <img className="workImage" src={theJob.image} alt={theJob.job} />
       <button className="button" onClick={toggleApply}>
         Candidater
       </button>
