@@ -23,18 +23,18 @@
   font-family: "Molengo", sans-serif;
 }
 
-.jobCard h2 {
+.job-titre {
   font-size: 1.5rem;
   font-weight: 500;
   font-family: "Molengo", sans-serif;
 }
-.jobCard h3 {
+.missions-titre {
   font-size: 1.2rem;
   font-weight: 200;
   font-family: "Molengo", sans-serif;
   margin-top: 0.5rem;
 }
-.jobCard p {
+.details-p {
   font-size: 1rem;
   font-weight: 200;
   font-family: "Molengo", sans-serif;
@@ -43,6 +43,7 @@
 .workTitle {
   margin-top: 2rem;
   background-color: var(--offwhite);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   border-radius: 16px;
@@ -52,15 +53,20 @@
 }
 .titreFicheMétier {
   display: flex;
-  text-align: center;
   align-items: center;
+  margin-top: 0.5rem;
 }
-
-.workTitle h1 {
-  font-size: 2rem;
+.heart-metier {
+  width: 15rem;
+  text-align: end;
+  margin-right: 1rem;
+}
+.titre-metiers {
+  font-size: 3rem;
   color: var(--blue);
   letter-spacing: 0.05em;
   font-family: "Jomhuria", serif;
+  padding-left: 1rem;
 }
 .workTitle button {
   margin: 1rem;
@@ -72,9 +78,8 @@
   width: 60%;
   border-radius: 8px;
   margin-inline: 20svw;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  margin-left: 4.2rem;
+  margin: 0 1rem 0 1rem;
+  margin-left: 4.3rem;
 }
 
 .overlay {
