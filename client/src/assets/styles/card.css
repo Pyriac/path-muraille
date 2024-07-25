@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria&family=Molengo&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.card {
+  background-color: #eef0e8;
+  border-radius: 10px;
+  padding: 24px;
+  margin: 16px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.card-header h2 {
+  justify-content: flex-start;
+  font-size: 3rem;
+  color: #214e65;
+  margin: 0;
+  font-weight: 500;
+}
+
+.card-header span {
+  font-size: 1rem;
+
+  color: #7d7d7d;
+  font-family: "Molengo", sans-serif;
+}
+
+.card-body {
+  margin-bottom: 5px; /* Augmenté pour plus d'espace */
+}
+
+.company {
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.details {
+  margin: 8px 0; /* Augmenté pour plus d'espace */
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.card-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.heart {
+  width: 20%;
+  opacity: 40%;
+}
+
+.favorite {
+  width: 20%;
+}
+
+.card-footer button {
+  width: 100%;
+  margin: 0;
+}
