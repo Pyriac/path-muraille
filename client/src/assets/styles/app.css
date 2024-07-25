@@ -35,14 +35,15 @@ button {
   font-weight: 500;
   font-size: 1rem;
   margin: 1rem;
+  width: 80%;
 }
 
 input {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   margin: 1rem;
-}
-
-.Search_bar {
-  display: flex;
-  flex-direction: column;
+  margin-top: 3rem;
+  width: 80%;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 8px 0px inset;
 }

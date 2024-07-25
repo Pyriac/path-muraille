@@ -8,3 +8,15 @@ h2 {
   font-size: 3.5rem;
   font-weight: 400;
 }
+
+.Offre_titre {
+  justify-content: center;
+  margin: 1rem 0rem;
+  color: #214e65;
+}
+
+.Search_bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
