@@ -25,7 +25,7 @@ export default function Home() {
       <h1>coucou from Home</h1>
       <h2>{data[0].sex}</h2>
       <div className="Search_bar">
-        <input type="text" />
+        <input type="text" className="searchInput" />
         <button>Rechercher</button>
       </div>
       <h2 className="Offre_titre">LES OFFRES DU MOMENT</h2>

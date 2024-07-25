@@ -34,12 +34,12 @@ button {
   font-family: "Molengo", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  margin: 1rem;
+  margin-inline: 10svw;
   cursor: pointer;
   width: 80%;
 }
 
-input {
+.searchInput {
   padding: 1rem 1.5rem;
   margin: 1rem;
   margin-top: 3rem;

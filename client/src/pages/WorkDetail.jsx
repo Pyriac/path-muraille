@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 
 import Papa from "papaparse";
 
-import "../assets/styles/workdetail.css";
 import "../assets/styles/workDetail.css";
 
 import Application from "../components/Application";

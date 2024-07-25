@@ -1,38 +1,59 @@
 import "../assets/styles/application.css";
 
 export default function Application() {
+  const submitting = false;
   return (
     <section>
       <form className="form">
         <div className="flex">
           <label>
-            <input required="" placeholder="" type="text" className="input" />
             <span>Prénom</span>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              className="inputApply"
+            />
           </label>
 
           <label>
-            <input required="" placeholder="" type="text" className="input" />
             <span>Nom</span>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              className="inputApply"
+            />
           </label>
         </div>
         <label>
-          <input required="" placeholder="" type="text" className="input" />
           <span>email</span>
+          <input
+            required=""
+            placeholder=""
+            type="text"
+            className="inputApply"
+          />
         </label>
         <label>
-          <input required="" type="" placeholder="" className="input" />
           <span>CV</span>
+          <input
+            required=""
+            type="file"
+            placeholder=""
+            className="inputApply"
+          />
         </label>
         <label>
+          <span>Message</span>
           <textarea
             required=""
             rows="3"
             placeholder=""
             className="input01"
           ></textarea>
-          <span>Message</span>
         </label>
-        <button className="buttonOrange" type="submit">
+        <button className="buttonOrange" type="submit" disabled={submitting}>
           Envoyer ma candidature
         </button>
       </form>

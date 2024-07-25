@@ -1,4 +1,30 @@
-.modal,
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria&family=Molengo&display=swap");
+
+.jobCard {
+  background-color: var(--beige);
+  border-radius: 8px;
+  width: 80%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.workTitle {
+  display: flex;
+  flex-direction: row;
+}
+
+.workTitle h1 {
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  font-family: "Jomhuria", serif;
+  color: var(--blue);
+}
+
+.workTitle button {
+  width: 100px;
+}
+
 .overlay {
   width: 100vw;
   height: 10vh;
