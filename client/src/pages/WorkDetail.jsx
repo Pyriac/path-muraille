@@ -29,20 +29,21 @@ export default function WorkDetail() {
 
         <section className="jobCard">
           <h2>{data[indexTemporaire].job_details}</h2>
-          <h3>Vos missions</h3>
+          <h3>Vos missions :</h3>
           <ul>
             <li>{data[indexTemporaire].task_details1}</li>
             <li>{data[indexTemporaire].task_details2}</li>
             <li>{data[indexTemporaire].task_details3}</li>
             <li>{data[indexTemporaire].task_details4}</li>
           </ul>
-          <h3>Profil recherché</h3>
+          <h3>Profil recherché :</h3>
           <ul>
             <li>{data[indexTemporaire].profil}</li>
             <li>{data[indexTemporaire].education}</li>
           </ul>
-          <h3>Employeur</h3>
+          <h3>Employeur :</h3>
           <p>{data[indexTemporaire].company}</p>
+          <p>{data[indexTemporaire].location}</p>
         </section>
 
         <h4>Image à afficher</h4>

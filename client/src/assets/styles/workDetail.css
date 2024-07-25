@@ -15,9 +15,31 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.jobCard li {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Molengo", sans-serif;
 }
 
+.jobCard h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Molengo", sans-serif;
+}
+.jobCard h3 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  font-family: "Molengo", sans-serif;
+  margin-top: 0.5rem;
+}
+.jobCard p {
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: "Molengo", sans-serif;
+  margin-bottom: 0.5rem;
+}
 .workTitle {
   margin-top: 2rem;
   background-color: var(--offwhite);
@@ -35,7 +57,7 @@
 }
 
 .workTitle h1 {
-  font-size: 30px;
+  font-size: 2rem;
   color: var(--blue);
   letter-spacing: 0.05em;
   font-family: "Jomhuria", serif;
