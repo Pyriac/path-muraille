@@ -21,7 +21,11 @@ export default function Home() {
   return (
     <section>
       <div className="Search_bar">
-        <input type="text" className="searchInput" />
+        <input
+          type="text"
+          className="searchInput"
+          placeholder="Tapez votre recherche ici"
+        />
         <button>Rechercher</button>
       </div>
       <h2 className="Offre_titre">LES OFFRES DU MOMENT</h2>

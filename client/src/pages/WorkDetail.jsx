@@ -6,6 +6,7 @@ import "../assets/styles/workdetail.css";
 import Papa from "papaparse";
 
 import Application from "../components/Application";
+import Coeur from "../assets/Vector.svg";
 
 export default function WorkDetail() {
   const jobsFromLoader = useLoaderData();
@@ -32,14 +33,27 @@ export default function WorkDetail() {
       toggleApply(!apply);
     }
   };
+  const [heartStyle, setHeartStyle] = useState("heart");
 
+  const handleClick = () => {
+    if (heartStyle === "heart") {
+      setHeartStyle("favorite");
+    } else {
+      setHeartStyle("heart");
+    }
+  };
   return (
     <section className="workTitle">
       <div>
         <h1>
           {theJob.job.toUpperCase()} {theJob.sex.toUpperCase()}
         </h1>
-        <button>Coeur</button>
+        <img
+          onClick={handleClick}
+          className={heartStyle}
+          src={Coeur}
+          alt="ajouter au favoris"
+        />
       </div>
 
       <section className="jobCard">
