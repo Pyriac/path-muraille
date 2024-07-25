@@ -1,6 +1,8 @@
+
 import { useState } from "react";
 import "../assets/styles/app.css";
 import "../assets/styles/card.css";
+
 import Coeur from "../assets/Vector.svg";
 
 export default function Card(data) {

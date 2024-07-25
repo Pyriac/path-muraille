@@ -44,6 +44,11 @@ export default function WorkDetail() {
       </section>
 
       <h4>Image à afficher</h4>
+      <img
+        className="workImage"
+        src={data[indexTemporaire].image}
+        alt={data[indexTemporaire].job}
+      />
       <button>Bouton à modifier</button>
     </>
   );
