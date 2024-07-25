@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../assets/styles/app.css";
 import "../assets/styles/card.css";
 
@@ -29,8 +30,9 @@ export default function Card(data) {
         <p>{data.data.location}</p>
       </div>
       <div className="card-footer">
-        <button>Voir les détails</button>
-
+        <Link to={`/jobs/details/${data.data.id}`}>
+          <button>Voir les détails</button>
+        </Link>
         <img
           onClick={handleClick}
           className={heartStyle}
