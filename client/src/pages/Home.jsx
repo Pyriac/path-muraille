@@ -16,8 +16,6 @@ export default function Home() {
 
   const { data } = parse();
 
-  console.info(data);
-
   return (
     <section>
       <div className="Search_bar">
@@ -25,9 +23,11 @@ export default function Home() {
         <button>Rechercher</button>
       </div>
       <h2 className="Offre_titre">LES OFFRES DU MOMENT</h2>
-      {data.slice(0, 10).map((work) => (
-        <Card key={work.id} />
-      ))}
+      <div className="Card_Moment">
+        {data.slice(0, 10).map((work) => (
+          <Card key={work.id} data={work} />
+        ))}
+      </div>
     </section>
   );
 }
