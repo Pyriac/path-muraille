@@ -18,8 +18,9 @@ export default function Home() {
 
   return (
     <section>
-      <h1>coucou from Home</h1>
-      <h2>{data[0].Sexe}</h2>
+      <input type="text" />
+      <button>Rechercher</button>
+      <h2>LES OFFRES DU MOMENT</h2>
     </section>
   );
 }
