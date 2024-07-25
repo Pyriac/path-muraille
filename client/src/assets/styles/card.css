@@ -65,6 +65,11 @@
 
 .heart {
   width: 20%;
+  opacity: 40%;
+}
+
+.favorite {
+  width: 20%;
 }
 
 .card-footer button {

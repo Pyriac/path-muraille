@@ -1,8 +1,18 @@
+import { useState } from "react";
 import "../assets/styles/app.css";
 import "../assets/styles/card.css";
 import Coeur from "../assets/Vector.svg";
 
 export default function Card(data) {
+  const [heartStyle, setHeartStyle] = useState("heart");
+
+  const handleClick = () => {
+    if (heartStyle === "heart") {
+      setHeartStyle("favorite");
+    } else {
+      setHeartStyle("heart");
+    }
+  };
   return (
     <div className="card">
       <div className="card-header">
@@ -16,7 +26,13 @@ export default function Card(data) {
       </div>
       <div className="card-footer">
         <button>Voir les détails</button>
-        <img className="heart" src={Coeur} alt="ajouter au favoris" />
+
+        <img
+          onClick={handleClick}
+          className={heartStyle}
+          src={Coeur}
+          alt="ajouter au favoris"
+        />
       </div>
     </div>
   );
