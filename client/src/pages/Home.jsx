@@ -20,10 +20,12 @@ export default function Home() {
 
   return (
     <section>
-      <h1>coucou from Home</h1>
-      <h2>{data[0].sex}</h2>
       <div className="Search_bar">
-        <input type="text" className="searchInput" />
+        <input
+          type="text"
+          className="searchInput"
+          placeholder="Tapez votre recherche ici"
+        />
         <button>Rechercher</button>
       </div>
       <h2 className="Offre_titre">LES OFFRES DU MOMENT</h2>
