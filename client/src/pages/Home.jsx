@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 
 import Papa from "papaparse";
+import Card from "../components/Card";
+import "../assets/styles/home.css";
 
 export default function Home() {
   const jobsFromLoader = useLoaderData();
@@ -18,8 +20,14 @@ export default function Home() {
 
   return (
     <section>
-      <h1>coucou from Home</h1>
-      <h2>{data[0].sex}</h2>
+      <div className="Search_bar">
+        <input type="text" />
+        <button>Rechercher</button>
+      </div>
+      <h2>LES OFFRES DU MOMENT</h2>
+      {data.map((work) => (
+        <Card key={work.id} />
+      ))}
     </section>
   );
 }
