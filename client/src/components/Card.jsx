@@ -16,8 +16,6 @@ export default function Card(data) {
     }
   };
 
-  console.info(data.data.id);
-
   return (
     <div className="card">
       <div className="card-header">

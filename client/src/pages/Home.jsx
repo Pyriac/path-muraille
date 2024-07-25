@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 
 import Papa from "papaparse";
@@ -9,8 +9,8 @@ import "../assets/styles/application.css";
 
 export default function Home() {
   const jobsFromLoader = useLoaderData();
-  // const [search, setSearch] = useState("");
-  // const là pour plus
+  const [search, setSearch] = useState("");
+
   const navigate = useNavigate();
 
   const parse = () =>
@@ -22,22 +22,23 @@ export default function Home() {
 
   const { data } = parse();
 
-  // const handleChangeSearch = (event) => {
-  //   setSearch(event.target.value);
-  // };
-
-  const handleSearchClick = () => {
-    navigate(`/jobs`);
+  const handleChangeSearch = (event) => {
+    setSearch(event.target.value);
   };
 
+  const handleSearchClick = () => {
+    search ? navigate(`/jobs/${search}`) : null;
+  };
+
+  console.info(data);
   return (
     <section>
       <div className="Search_bar">
         <input
           type="search"
           className="searchInput"
-          placeholder="Tapez votre recherche ici"
-          // onChange={handleChangeSearch}
+          placeholder="Intitulé du poste"
+          onChange={handleChangeSearch}
         />
         <button type="button" onClick={handleSearchClick}>
           Rechercher
