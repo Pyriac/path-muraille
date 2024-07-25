@@ -79,19 +79,18 @@ export default function Application() {
               <form className="form2">
                 <button
                   className="buttonClose"
-                  type="button"
+                  type="submit"
                   disabled={submitting}
                 >
                   X
                 </button>
-                <p>
-                  Votre candidature est bien envoyée.
-                  <br />
-                  Surveillez votre boîte mail !
+                <p className="applySendMsg">
+                  🚀 Votre candidature est bien envoyée.
                 </p>
+                <p className="applySendMsg">Surveillez votre boîte mail !</p>
                 <button
                   className="buttonOrange"
-                  type="button"
+                  type="submit"
                   disabled={submitting}
                 >
                   Fermer
