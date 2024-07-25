@@ -15,6 +15,9 @@ export default function Card(data) {
       setHeartStyle("heart");
     }
   };
+
+  console.info(data.data.id);
+
   return (
     <div className="card">
       <div className="card-header">
@@ -27,10 +30,9 @@ export default function Card(data) {
         <p>{data.data.location}</p>
       </div>
       <div className="card-footer">
-        <Link to="/jobs/detail">
+        <Link to={`/jobs/details/${data.data.id}`}>
           <button>Voir les détails</button>
         </Link>
-
         <img
           onClick={handleClick}
           className={heartStyle}
