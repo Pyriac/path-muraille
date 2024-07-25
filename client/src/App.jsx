@@ -1,4 +1,3 @@
-
 import { Outlet } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
@@ -15,4 +14,4 @@ function App() {
     </>
   );
 }
-export default function App() {
+export default App;
