@@ -28,8 +28,8 @@ export default function Home() {
         <input type="text" />
         <button>Rechercher</button>
       </div>
-      <h2>LES OFFRES DU MOMENT</h2>
-      {data.map((work) => (
+      <h2 className="Offre_titre">LES OFFRES DU MOMENT</h2>
+      {data.slice(0, 10).map((work) => (
         <Card key={work.id} />
       ))}
     </section>
