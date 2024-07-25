@@ -10,6 +10,7 @@ import Home from "./pages/Home.jsx";
 import JobsList from "./pages/JobsList.jsx";
 import WorkDetails from "./pages/WorkDetail.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
+import { FavoriteProvider } from "./contexts/FavoriteContext";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -43,6 +44,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <FavoriteProvider>
+      <RouterProvider router={router} />
+    </FavoriteProvider>
   </React.StrictMode>
 );
