@@ -5,12 +5,18 @@ import { Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <nav>
-      <Link to="/">
-        <img className="Logo" src={logo} alt="logo-path-muraille" />
-      </Link>
-      <Link to="/about">
-        <h2>About Us</h2>
-      </Link>
+      <div className="Navbar-left">
+        <Link to="/">
+          <img className="Logo" src={logo} alt="logo-path-muraille" />
+        </Link>
+      </div>
+      <div className="Navbar-right">
+        <ul>
+          <Link to="/about">
+            <li className="About">About Us</li>
+          </Link>
+        </ul>
+      </div>
     </nav>
   );
 }
