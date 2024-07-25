@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
+import "../assets/styles/workdetail.css";
+
 import Papa from "papaparse";
 
 import Application from "../components/Application";
