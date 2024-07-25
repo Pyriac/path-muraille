@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <section>
       <h1>coucou from Home</h1>
-      <h2>{data[0].Sexe}</h2>
+      <h2>{data[0].sex}</h2>
     </section>
   );
 }
