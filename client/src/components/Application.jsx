@@ -1,7 +1,16 @@
+import { useState } from "react";
+
+import ApplicationSend from "../components/Application";
+
 import "../assets/styles/application.css";
 
 export default function Application() {
-  const submitting = false;
+  const [send, setSend] = useState(false);
+
+  const toggleSend = () => {
+    setSend(!send);
+  };
+
   return (
     <section>
       <form className="form">
@@ -53,9 +62,24 @@ export default function Application() {
             className="input01"
           ></textarea>
         </label>
-        <button className="buttonOrange" type="submit" disabled={submitting}>
+        <button className="buttonOrange" type="button" onClick={toggleSend}>
           Envoyer ma candidature
         </button>
+        {send && (
+          <div className="search">
+            <div
+              className="overlay"
+              role="button"
+              tabIndex="0"
+              onClick={toggleSend}
+            >
+              <title>empty</title>
+            </div>
+            <div className="search-content">
+              <ApplicationSend />
+            </div>
+          </div>
+        )}
       </form>
     </section>
   );
