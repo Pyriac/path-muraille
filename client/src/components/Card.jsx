@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import "../assets/styles/app.css";
 import Coeur from "../assets/Vector.svg";
 
@@ -21,10 +20,3 @@ export default function Card(data) {
     </div>
   );
 }
-
-Card.propTypes = {
-  title: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-};

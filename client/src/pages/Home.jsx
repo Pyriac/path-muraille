@@ -16,8 +16,6 @@ export default function Home() {
 
   const { data } = parse();
 
-  console.info(data);
-
   return (
     <section>
       <div className="Search_bar">
