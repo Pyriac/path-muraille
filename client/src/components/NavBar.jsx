@@ -3,8 +3,14 @@ import "../assets/styles/navbar.css";
 export default function NavBar() {
   return (
     <nav>
-      <img className="Logo" src={logo} alt="logo-path-muraille" />
-      <h2>About Us</h2>
+      <div className="Navbar-left">
+        <img className="Logo" src={logo} alt="logo-path-muraille" />
+      </div>
+      <div className="Navbar-right">
+        <ul>
+          <li className="About">About Us</li>
+        </ul>
+      </div>
     </nav>
   );
 }
