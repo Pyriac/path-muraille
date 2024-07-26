@@ -60,21 +60,24 @@ export default function WorkDetail() {
       </div>
       <section className="jobCard">
         <h2 className="job-titre">{theJob.job_details}</h2>
-        <h3 className="missions-titre">Vos missions :</h3>
+        <p className="details-p area">
+          à {theJob.location} dans la province de {theJob.province}
+        </p>
+        <h3 className="missions-titre">Vos missions</h3>
         <ul>
           <li>{theJob.task_details1}</li>
           <li>{theJob.task_details2}</li>
           <li>{theJob.task_details3}</li>
           <li>{theJob.task_details4}</li>
         </ul>
-        <h3 className="missions-titre">Profil recherché :</h3>
+        <h3 className="missions-titre">Profil recherché</h3>
         <ul>
           <li>{theJob.profil}</li>
           <li>{theJob.education}</li>
         </ul>
-        <h3 className="missions-titre">Employeur :</h3>
-        <p className="details-p">{theJob.company}</p>
-        <p className="details-p">{theJob.location}</p>
+        <p className="details-p">
+          Offre proposée par <span className="company">{theJob.company}</span>
+        </p>
       </section>
 
       <img className="workImage" src={theJob.image} alt={theJob.job} />
