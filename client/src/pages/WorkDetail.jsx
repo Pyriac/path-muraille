@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-
+import { useFavorites } from "../contexts/FavoriteContext";
 import "../assets/styles/workdetail.css";
-
 import Papa from "papaparse";
-
 import Application from "../components/Application";
 import Coeur from "../assets/Vector.svg";
 
 export default function WorkDetail() {
   const jobsFromLoader = useLoaderData();
   const { id } = useParams();
+  const { addToFavorites, removeFromFavorites, favoris } = useFavorites();
+
   const jobId = Number(id - 1);
 
   const parse = () =>
@@ -21,25 +21,33 @@ export default function WorkDetail() {
     });
 
   const { data } = parse();
-
   const theJob = data[jobId];
 
   const [apply, setApply] = useState(false);
+  const [heartStyle, setHeartStyle] = useState("heart");
+
+  useEffect(() => {
+    const isFavorite = favoris.some((fav) => fav.id === theJob.id);
+    setHeartStyle(isFavorite ? "favorite" : "heart");
+  }, [favoris, theJob.id]);
+
   const toggleApply = () => {
     setApply(!apply);
   };
+
   const handleKeyUp = (event) => {
     if (event.key === " ") {
       toggleApply(!apply);
     }
   };
-  const [heartStyle, setHeartStyle] = useState("heart");
 
-  const handleClick = () => {
+  const handleFavoriteClick = () => {
     if (heartStyle === "heart") {
       setHeartStyle("favorite");
+      addToFavorites(theJob);
     } else {
       setHeartStyle("heart");
+      removeFromFavorites(theJob.id);
     }
   };
 
@@ -51,7 +59,7 @@ export default function WorkDetail() {
         </h1>
         <div className="heart-metier">
           <img
-            onClick={handleClick}
+            onClick={handleFavoriteClick}
             className={heartStyle}
             src={Coeur}
             alt="ajouter au favoris"
