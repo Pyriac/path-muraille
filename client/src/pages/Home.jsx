@@ -1,45 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
-
 import Papa from "papaparse";
 import Card from "../components/Card";
 import "../assets/styles/home.css";
-
 import "../assets/styles/application.css";
 
 export default function Home() {
   const jobsFromLoader = useLoaderData();
   const [search, setSearch] = useState("");
-
+  const [data, setData] = useState([]);
   const navigate = useNavigate();
 
-  const parse = () =>
+  useEffect(() => {
     Papa.parse(jobsFromLoader, {
       header: true,
-      complete: (result) => result,
+      complete: (result) => {
+        setData(result.data);
+      },
       error: (error) => console.error(error),
     });
-
-  const { data } = parse();
+  }, [jobsFromLoader]);
 
   const handleChangeSearch = (event) => {
     setSearch(event.target.value);
   };
 
   const handleSearchClick = () => {
-    search ? navigate(`/jobs/${search}`) : null;
+    if (search) {
+      navigate(`/jobs/${search}`);
+    }
   };
 
-  function shuffleArray(array) {
+  const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
-  }
-  const shuffledArray = shuffleArray(data);
+  };
 
-  console.info(data);
+  const shuffledArray = useMemo(() => shuffleArray([...data]), [data]);
 
   return (
     <section>
