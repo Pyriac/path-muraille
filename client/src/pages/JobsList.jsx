@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams, useNavigate } from "react-router-dom";
 
 import Card from "../components/Card";
 import Papa from "papaparse";
@@ -10,7 +10,9 @@ export default function JobsList() {
   const [selectedProvince, setSelectedProvince] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
   const jobsFromLoader = useLoaderData();
+  const [ReSearch, setSearch] = useState("");
   const { search } = useParams();
+  const navigate = useNavigate();
 
   const parse = () =>
     Papa.parse(jobsFromLoader, {
@@ -21,8 +23,16 @@ export default function JobsList() {
 
   const { data } = parse();
 
+  const handleSearchClick = () => {
+    ReSearch ? navigate(`/jobs/${ReSearch}`) : null;
+  };
+
+  const handleChangeSearch = (event) => {
+    setSearch(event.target.value);
+  };
+
+
   const searchFilter = data.filter((work) =>
-    // search.toLowerCase() ===
     work.job.toLowerCase().startsWith(search.toLowerCase()) ? work : null
   );
 
@@ -40,7 +50,18 @@ export default function JobsList() {
 
   return (
     <section>
-      <p className="FiltrerPar">Filtrer par :</p>
+            <div className="Search_bar">
+        <input
+          type="search"
+          className="searchInput"
+          placeholder="Intitulé du poste"
+          onChange={handleChangeSearch}
+        />
+        <button type="button" onClick={handleSearchClick}>
+          Rechercher
+        </button>
+      </div>
+<p className="FiltrerPar">Filtrer par :</p>
       <form>
         <label htmlFor="Filter-select">
           <p>Région</p>
