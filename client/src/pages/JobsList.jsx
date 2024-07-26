@@ -20,8 +20,6 @@ export default function JobsList() {
     });
 
   const { data } = parse();
-  console.info(data);
-  console.info(search);
 
   const handleSearchClick = () => {
     ReSearch ? navigate(`/jobs/${ReSearch}`) : null;

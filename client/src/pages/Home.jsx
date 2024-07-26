@@ -30,7 +30,6 @@ export default function Home() {
     search ? navigate(`/jobs/${search}`) : null;
   };
 
-  console.info(data);
   return (
     <section>
       <div className="Search_bar">
