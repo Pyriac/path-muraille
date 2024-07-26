@@ -30,7 +30,6 @@ export default function JobsList() {
   };
 
   const searchFilter = data.filter((work) =>
-    // search.toLowerCase() ===
     work.job.toLowerCase().startsWith(search.toLowerCase()) ? work : null
   );
 
