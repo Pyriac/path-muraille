@@ -18,6 +18,10 @@
   --red: #99564b;
 }
 
+main {
+  min-height: 80svh;
+}
+
 section {
   display: flex;
   flex-direction: column;
