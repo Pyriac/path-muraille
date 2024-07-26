@@ -10,6 +10,14 @@ export default function AboutUs() {
         <div className="values">
           <p>Des plages de travail d’un maximum de 48h d’affilée.</p>
           <p>Une rémunération en repas à hauteur d’un repas par jour.</p>
+          <p>AfterWork sur le Rooftop de la muraille tous les jeudis soirs.</p>
+          <p>
+            Garderie pour vos enfants directement sur votre lieu de travail.
+          </p>
+          <p>
+            Pour tout autre besoin votre contremaitre sera disponible pour
+            échanger avec vous.
+          </p>
         </div>
       </div>
     </div>
