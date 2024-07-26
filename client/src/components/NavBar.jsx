@@ -11,12 +11,12 @@ export default function NavBar() {
         </Link>
       </div>
       <div className="Navbar-right">
-        <ul>
+        <ul className="navbuttons">
           <Link to="/about">
-            <li className="About">About Us</li>
+            <li className="aboutbutton">A propos</li>
           </Link>
           <Link to="/favoris">
-            <li>Favoris</li>
+            <li className="favorisbutton">Favoris</li>
           </Link>
         </ul>
       </div>

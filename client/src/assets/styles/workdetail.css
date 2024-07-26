@@ -122,3 +122,13 @@ span.company {
   width: 100%;
   height: 100%;
 }
+
+.navbuttons li {
+  color: var(--blue);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.navbuttons {
+  padding-top: 1rem;
+}
