@@ -4,6 +4,8 @@ import { useLoaderData, useParams, useNavigate } from "react-router-dom";
 import Card from "../components/Card";
 import Papa from "papaparse";
 
+import "../assets/styles/jobslist.css";
+
 export default function JobsList() {
   const [selectedProvince, setSelectedProvince] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
@@ -29,6 +31,7 @@ export default function JobsList() {
     setSearch(event.target.value);
   };
 
+
   const searchFilter = data.filter((work) =>
     work.job.toLowerCase().startsWith(search.toLowerCase()) ? work : null
   );
@@ -41,9 +44,13 @@ export default function JobsList() {
     selectedLocation === "" ? work : work.location === selectedLocation
   );
 
+  const result = LocationFilter.length;
+
+  const pluralSingularResults = () => (result < 2 ? " résultat" : " résultats");
+
   return (
-    <>
-      <div className="Search_bar">
+    <section>
+            <div className="Search_bar">
         <input
           type="search"
           className="searchInput"
@@ -54,10 +61,12 @@ export default function JobsList() {
           Rechercher
         </button>
       </div>
+<p className="FiltrerPar">Filtrer par :</p>
       <form>
         <label htmlFor="Filter-select">
-          Filtrer par :<p>Région</p>
+          <p>Région</p>
           <select
+            className="province-select"
             name="province-select"
             id="province-select"
             onChange={(event) => setSelectedProvince(event.target.value)}
@@ -71,6 +80,7 @@ export default function JobsList() {
           </select>
           <p>Ville</p>
           <select
+            className="ville-select"
             name="location-select"
             id="location-select"
             onChange={(event) => setSelectedLocation(event.target.value)}
@@ -89,6 +99,14 @@ export default function JobsList() {
           </select>
         </label>
       </form>
+      {result === 0 ? null : (
+        <div className="sentenceResult">
+          <p>
+            {`${result}
+            ${pluralSingularResults()}`}
+          </p>
+        </div>
+      )}
       <div className="Card_Moment">
         {LocationFilter.length ? (
           LocationFilter.map((work) => <Card key={work.id} data={work} />)
@@ -96,6 +114,6 @@ export default function JobsList() {
           <p>Oups, aucun résultat 🕵️‍♂️</p>
         )}
       </div>
-    </>
+    </section>
   );
 }

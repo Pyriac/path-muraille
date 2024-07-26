@@ -106,11 +106,17 @@ span {
   width: 90%;
   position: absolute;
   display: flex;
-  margin-top: -60svh;
+  margin-top: -55svh;
   text-align: center;
 }
 
-.buttonClose {
+.buttonClose1 {
+  all: unset;
+  text-align: right;
+  color: var(--orange);
+}
+
+.buttonClose2 {
   all: unset;
   text-align: right;
   margin-bottom: 1rem;

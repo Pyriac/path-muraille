@@ -42,6 +42,7 @@ export default function WorkDetail() {
       setHeartStyle("heart");
     }
   };
+
   return (
     <section className="workTitle">
       <div className="titreFicheMétier">

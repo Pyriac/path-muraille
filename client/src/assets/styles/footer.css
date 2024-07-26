@@ -1,0 +1,16 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--offwhite);
+  align-items: center;
+}
+
+footer > img {
+  width: 3rem;
+  margin: 1rem;
+}
+
+footer > p {
+  margin-left: 0.5rem;
+  font-size: smaller;
+}

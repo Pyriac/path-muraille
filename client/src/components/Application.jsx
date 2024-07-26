@@ -14,6 +14,9 @@ export default function Application() {
   return (
     <section>
       <form className="form">
+        <button className="buttonClose1" type="submit" disabled={submitting}>
+          X
+        </button>
         <div className="flex">
           <label>
             <span>Prénom</span>
@@ -36,7 +39,7 @@ export default function Application() {
           </label>
         </div>
         <label>
-          <span>email</span>
+          <span>Email</span>
           <input
             required=""
             placeholder=""
@@ -78,7 +81,7 @@ export default function Application() {
             <div className="search-content">
               <form className="form2">
                 <button
-                  className="buttonClose"
+                  className="buttonClose2"
                   type="submit"
                   disabled={submitting}
                 >
