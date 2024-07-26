@@ -15,9 +15,14 @@ export function FavoriteProvider({ children }) {
     });
   };
 
+  const removeFromFavorites = (jobId) => {
+    setFavoris((prevFavoris) => prevFavoris.filter((fav) => fav.id !== jobId));
+  };
+
   const value = {
     favoris,
     addToFavorites,
+    removeFromFavorites,
   };
 
   return (

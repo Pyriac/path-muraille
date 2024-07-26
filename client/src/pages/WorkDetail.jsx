@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData, useParams, useNavigate } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { useFavorites } from "../contexts/FavoriteContext";
 import "../assets/styles/workdetail.css";
 import Papa from "papaparse";
@@ -9,7 +9,6 @@ import Coeur from "../assets/Vector.svg";
 export default function WorkDetail() {
   const jobsFromLoader = useLoaderData();
   const { id } = useParams();
-  const navigate = useNavigate();
   const { addToFavorites } = useFavorites();
 
   const jobId = Number(id - 1);
@@ -36,7 +35,6 @@ export default function WorkDetail() {
 
   const handleFavoriteClick = () => {
     addToFavorites(theJob);
-    navigate("/favoris");
   };
 
   return (

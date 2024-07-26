@@ -7,9 +7,11 @@ import "../assets/styles/card.css";
 import Coeur from "../assets/Vector.svg";
 import FavoriteContext from "../contexts/FavoriteContext";
 
-export default function Card({ data }) {
-  const { addToFavorites } = useContext(FavoriteContext);
-  const [heartStyle, setHeartStyle] = useState("heart");
+export default function Card({ data, isFavorite }) {
+  const { addToFavorites, removeFromFavorites } = useContext(FavoriteContext);
+  const [heartStyle, setHeartStyle] = useState(
+    isFavorite ? "favorite" : "heart"
+  );
 
   const handleClick = () => {
     if (heartStyle === "heart") {
@@ -17,7 +19,7 @@ export default function Card({ data }) {
       addToFavorites(data);
     } else {
       setHeartStyle("heart");
-      // Optionally, you could implement removing from favorites here.
+      removeFromFavorites(data.id);
     }
   };
 

@@ -11,7 +11,7 @@ export default function Favoris() {
       {favoris.length > 0 ? (
         <div className="Card_Moment">
           {favoris.map((fav, index) => (
-            <Card key={index} data={fav} />
+            <Card key={index} data={fav} isFavorite />
           ))}
         </div>
       ) : (
