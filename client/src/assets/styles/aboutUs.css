@@ -49,3 +49,39 @@
   text-align: center;
   font-weight: 600;
 }
+
+/*Stars*/
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 40%;
+  margin-left: 4rem;
+}
+
+.starsRating {
+  color: #ffa723;
+  display: flex;
+  width: 1rem;
+}
+
+.values-rating {
+  background-color: #eef0e8;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  width: 92%;
+}
+
+.advice {
+  font-weight: bold;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.adviceName {
+  margin-top: 1rem;
+  font-size: smaller;
+  font-style: italic;
+  text-align: end;
+}
