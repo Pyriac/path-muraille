@@ -13,7 +13,7 @@
 
 .NOS-VALEURS {
   text-align: center;
-  margin: 1rem 0;
+  margin-top: 1rem;
   color: #214e65;
   font-family: "Jomhuria", serif;
   font-weight: 400;
@@ -46,7 +46,7 @@
   font-size: 1.2rem;
   color: #214e65;
   margin: 1rem 0; /* Uniformise la marge entre les paragraphes */
-  text-align: center;
+  text-align: left;
   font-weight: 600;
 }
 

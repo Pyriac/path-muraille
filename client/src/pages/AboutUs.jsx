@@ -11,16 +11,16 @@ export default function AboutUs() {
         <img src={China} alt="China" className="China_About" />
         <div className="values-container">
           <div className="values">
-            <p>Des plages de travail d’un maximum de 48h d’affilée.</p>
-            <p>Une rémunération en repas à hauteur d’un repas par jour.</p>
+            <p>○ Des plages de travail d’un maximum de 48h d’affilée.</p>
+            <p>○ Une rémunération en repas à hauteur d’un repas par jour.</p>
             <p>
-              AfterWork sur le Rooftop de la muraille tous les jeudis soirs.
+              ○ AfterWork sur le Rooftop de la muraille tous les jeudis soirs.
             </p>
             <p>
-              Garderie pour vos enfants directement sur votre lieu de travail.
+              ○ Garderie pour vos enfants directement sur votre lieu de travail.
             </p>
             <p>
-              Pour tout autre besoin votre contremaitre sera disponible pour
+              ○ Pour tout autre besoin votre contremaitre sera disponible pour
               échanger avec vous.
             </p>
           </div>
@@ -77,7 +77,7 @@ export default function AboutUs() {
         <p>
           On mange bien et on est bien payé. Mais j&apos;ai perdu 18 collègues
           cette semaine dans la chute d&apos;un bout de la muraille. Quand
-          est-ce les conditions de sécurité vont évoluer ?
+          est-ce que les conditions de sécurité vont évoluer ?
         </p>
         <p className="adviceName">Qing Qong - 3 janvier 196 av.J-C</p>
       </div>
