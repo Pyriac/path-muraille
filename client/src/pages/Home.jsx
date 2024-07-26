@@ -30,6 +30,17 @@ export default function Home() {
     search ? navigate(`/jobs/${search}`) : null;
   };
 
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+  const shuffledArray = shuffleArray(data);
+
+  console.info(data);
+
   return (
     <section>
       <div className="Search_bar">
@@ -45,7 +56,7 @@ export default function Home() {
       </div>
       <h2 className="Offre_titre">LES OFFRES DU MOMENT</h2>
       <div className="Card_Moment">
-        {data.slice(0, 10).map((work) => (
+        {shuffledArray.slice(0, 10).map((work) => (
           <Card key={work.id} data={work} />
         ))}
       </div>
