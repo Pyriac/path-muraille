@@ -11,9 +11,9 @@ h2 {
 
 .Offre_titre {
   justify-content: center;
-  margin: 1rem 0rem;
+  margin-top: 2.25rem;
   color: #214e65;
-  padding-left: 1rem;
+  text-align: center;
 }
 
 .Search_bar {
