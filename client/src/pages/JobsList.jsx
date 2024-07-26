@@ -31,7 +31,6 @@ export default function JobsList() {
     setSearch(event.target.value);
   };
 
-
   const searchFilter = data.filter((work) =>
     work.job.toLowerCase().startsWith(search.toLowerCase()) ? work : null
   );
@@ -50,7 +49,7 @@ export default function JobsList() {
 
   return (
     <section>
-            <div className="Search_bar">
+      <div className="Search_bar">
         <input
           type="search"
           className="searchInput"
@@ -61,9 +60,9 @@ export default function JobsList() {
           Rechercher
         </button>
       </div>
-<p className="FiltrerPar">Filtrer par :</p>
+      <p className="FiltrerPar">Filtrer par :</p>
       <form>
-        <label htmlFor="Filter-select">
+        <label className="label-from-jobs-list" htmlFor="Filter-select">
           <p>Région</p>
           <select
             className="province-select"
