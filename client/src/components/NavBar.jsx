@@ -15,6 +15,9 @@ export default function NavBar() {
           <Link to="/about">
             <li className="About">About Us</li>
           </Link>
+          <Link to="/favoris">
+            <li>Favoris</li>
+          </Link>
         </ul>
       </div>
     </nav>

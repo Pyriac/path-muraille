@@ -12,6 +12,7 @@ import WorkDetails from "./pages/WorkDetail.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import { FavoriteProvider } from "./contexts/FavoriteContext";
 import "./index.css";
+import Favoris from "./pages/Favoris.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs />,
+      },
+      {
+        path: "/favoris",
+        element: <Favoris />,
       },
     ],
   },

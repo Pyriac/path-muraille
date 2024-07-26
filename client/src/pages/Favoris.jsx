@@ -1,25 +1,22 @@
 import { useContext } from "react";
-import FavorisItem from "../components/FavorisItem";
 import FavoriteContext from "../contexts/FavoriteContext";
+import Card from "../components/Card";
 
-function Favoris() {
+export default function Favoris() {
   const { favoris } = useContext(FavoriteContext);
 
   return (
     <div className="wishpage">
-      <h2 className="wishlist-title second_title">Liste de souhaits</h2>
-      <section className="wishlist">
-        {favoris.map((id, index) => (
-          <FavorisItem key={[index]} id={id} />
-        ))}
-        {favoris.length > 0 ? (
-          ""
-        ) : (
-          <p className="no-fav-msg">You have no game in your wishlist.</p>
-        )}
-      </section>
+      <h3>Liste de souhaits</h3>
+      {favoris.length > 0 ? (
+        <div className="Card_Moment">
+          {favoris.map((fav, index) => (
+            <Card key={index} data={fav} />
+          ))}
+        </div>
+      ) : (
+        <p>Aucun élément dans votre liste de souhaits.</p>
+      )}
     </div>
   );
 }
-
-export default Favoris;
